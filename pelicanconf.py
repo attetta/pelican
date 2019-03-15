@@ -87,3 +87,9 @@ CATEGORY_URL = 'category/{slug}'
 CATEGORY_SAVE_AS = 'category/{slug}/index.html'
 TAG_URL = 'tag/{slug}'
 TAG_SAVE_AS = 'tag/{slug}/index.html'
+
+
+# The CNAME file is now added the local repository. 
+# This creates another issue: when we generate the website in Pelican the output folder gets deleted before it is loaded with new files. We need to create an exception for CNAME to avoid this. 
+DELETE_OUTPUT_DIRECTORY = True
+OUTPUT_RETENTION = ['CNAME']
