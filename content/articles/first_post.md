@@ -4,6 +4,7 @@ Date: 2019-01-01 9:00
 Category: blogging
 Tags: python, markdown, pelican
 Slug: my-first-blog-post
+status: draft
 
 Blog post content goes here
 Metadata should always appear at the top of the file. Each piece of metadata must be on a new line and follows the format metadata_keyword: data. Here's a list of the most common keywords and their usage:

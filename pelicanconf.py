@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'kishored'
 SITENAME = 'attetta'
-SITEURL = ''
+SITEURL = 'https://attetta.com'
 
 PATH = 'content'
 
@@ -43,14 +43,28 @@ OUTPUT_PATH='../output'
 
 
 # Tell Pelican where it can find the custom theme
-THEME = 'theme'
+THEME = 'theme/elegant'
 
 # Tell Pelican where the plugins folder is located 
 PLUGIN_PATHS = ['plugins/', ]
 
 # A typical Pelican website will utilize many different plugins to extend its capabilities. Each plugin must be setup individually within pelicanconf.py. 
 # The PLUGINS variable contains all plugins being used by the website. 
-PLUGINS = ['i18n_subsites', ]
+PLUGINS = ['i18n_subsites', 'tipue_search', 'sitemap' ]
+
+SITEMAP = {
+    "format": "xml",
+    "priorities": {
+        "articles": 0.7,
+        "indexes": 0.5,
+        "pages": 0.3,
+    },
+    "changefreqs": {
+        "articles": "monthly",
+        "indexes": "daily",
+        "pages": "monthly",
+    }
+}
 
 # The i18n_subsites plugin relies on a language called Jinja2. 
 # To properly configure the i18n_subsites plugin we must also add the JINJA_ENVIRONMENT variable 
