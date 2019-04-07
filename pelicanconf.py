@@ -52,6 +52,8 @@ PLUGIN_PATHS = ['plugins/', ]
 # The PLUGINS variable contains all plugins being used by the website. 
 PLUGINS = ['i18n_subsites', 'tipue_search', 'sitemap' ]
 
+DIRECT_TEMPLATES = (('index', 'tags', 'categories','archives', 'search', '404'))  
+
 SITEMAP = {
     "format": "xml",
     "priorities": {
@@ -81,7 +83,6 @@ PYGMENTS_STYLE = 'monokai'
 # we must tell Pelican where to look for the static media files 
 STATIC_PATHS = ['img', 'pdf']
 
-
 # We have the option to define where Pelican should look for our blog's pages. 
 # By default Pelican expects them to be in the content/pages folder. 
 # It is not necessary to state the path but it is a good practice to do so. 
@@ -90,17 +91,30 @@ PAGE_PATHS = ['pages']
 #To change the URL to show the content type and date as well. 
 # The ARTICLE_URL variable states what should display in the web browser's address bar 
 # while the ARTICLE_SAVE_AS variable defines where the article being generated should be output to.
-ARTICLE_URL = 'articles/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
-ARTICLE_SAVE_AS = 'articles/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
+# ARTICLE_URL = 'articles/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+# ARTICLE_SAVE_AS = 'articles/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+
+ARTICLE_URL = '{category}/{slug}.html'
+ARTICLE_SAVE_AS = ARTICLE_URL
 
 #For pages, categories, and tags. 
-PAGE_URL = 'pages/{slug}/'
-PAGE_SAVE_AS = 'pages/{slug}/index.html'
-CATEGORY_URL = 'category/{slug}'
-CATEGORY_SAVE_AS = 'category/{slug}/index.html'
-TAG_URL = 'tag/{slug}'
-TAG_SAVE_AS = 'tag/{slug}/index.html'
+# PAGE_URL = 'pages/{slug}/'
+# PAGE_SAVE_AS = 'pages/{slug}/index.html'
+PAGE_URL = '{slug}.html'
+PAGE_SAVE_AS = PAGE_URL
+
+# CATEGORY_URL = 'category/{slug}'
+# CATEGORY_SAVE_AS = 'category/{slug}/index.html'
+CATEGORY_URL = 'categories/{slug}.html'
+CATEGORY_SAVE_AS = CATEGORY_URL
+CATEGORIES_SAVE_AS = 'categories.html'
+
+# TAG_URL = 'tag/{slug}'
+# TAG_SAVE_AS = 'tag/{slug}/index.html'
+TAG_URL = 'tags/{slug}.html'
+TAG_SAVE_AS = TAG_URL
+TAGS_SAVE_AS = 'tags.html'
 
 
 # The CNAME file is now added the local repository. 
