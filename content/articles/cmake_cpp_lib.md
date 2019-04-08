@@ -3,6 +3,7 @@ Author: KishoreD
 Date: 2019-03-02 12:00
 Category: CPP
 Tags: CMAKE
+status: draft
 Slug: cmake-cpp-project-types
 
 
