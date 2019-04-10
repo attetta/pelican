@@ -78,7 +78,7 @@ JINJA_ENVIRONMENT = {
 BOOTSTRAP_THEME = 'flatly'
 
 #  Pelican displays code blocks using the Pygments code highlighter.
-PYGMENTS_STYLE = 'monokai'
+PYGMENTS_STYLE = ['monokai', 'emacs']
 
 # we must tell Pelican where to look for the static media files 
 STATIC_PATHS = ['img', 'pdf']

@@ -21,3 +21,4 @@ CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 
 #DISQUS_SITENAME = ""
 GOOGLE_ANALYTICS = "UA-135643376-2"
+# pelican -s publishconf.py . # run this to generate output with the analytics tag
