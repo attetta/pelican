@@ -1,0 +1,14 @@
+beautifulsoup4
+bs4
+cssmin
+flake8
+ghp-import
+markdown
+misspellings
+Online-W3C-Validator
+pelican
+peru
+pymarkdownlint
+tox
+typogrify
+webassets

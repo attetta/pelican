@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+pelican-plugins/
+
+output/
+
 # Distribution / packaging
 .Python
 build/

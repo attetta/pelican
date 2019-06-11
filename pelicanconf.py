@@ -39,14 +39,16 @@ DEFAULT_PAGINATION = False
 
 # Tell pelican which folder to output to. 
 # By default it will be generated to blog/source/output but we wanted them to appear in blog/output instead.
-OUTPUT_PATH='../output'
+# OUTPUT_PATH='../output'
 
+STATIC_PATHS = ['images', 'extra/CNAME']
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 
 # Tell Pelican where it can find the custom theme
-THEME = 'theme/elegant'
+THEME = 'themes/elegant'
 
 # Tell Pelican where the plugins folder is located 
-PLUGIN_PATHS = ['plugins/', ]
+PLUGIN_PATHS = ['pelican-plugins', ]
 
 # A typical Pelican website will utilize many different plugins to extend its capabilities. Each plugin must be setup individually within pelicanconf.py. 
 # The PLUGINS variable contains all plugins being used by the website. 
@@ -75,7 +77,7 @@ JINJA_ENVIRONMENT = {
 }
 
 # choose a css from pelican-bootstrap3 theme - theme/static/css/ 
-BOOTSTRAP_THEME = 'flatly'
+# BOOTSTRAP_THEME = 'flatly'
 
 #  Pelican displays code blocks using the Pygments code highlighter.
 PYGMENTS_STYLE = ['monokai', 'emacs']
@@ -117,7 +119,7 @@ TAG_SAVE_AS = TAG_URL
 TAGS_SAVE_AS = 'tags.html'
 
 
-# The CNAME file is now added the local repository. 
-# This creates another issue: when we generate the website in Pelican the output folder gets deleted before it is loaded with new files. We need to create an exception for CNAME to avoid this. 
-DELETE_OUTPUT_DIRECTORY = True
-OUTPUT_RETENTION = ['CNAME']
+# # The CNAME file is now added the local repository. 
+# # This creates another issue: when we generate the website in Pelican the output folder gets deleted before it is loaded with new files. We need to create an exception for CNAME to avoid this. 
+# DELETE_OUTPUT_DIRECTORY = True
+# OUTPUT_RETENTION = ['CNAME']
